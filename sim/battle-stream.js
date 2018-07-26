@@ -222,8 +222,9 @@ class BattlePlayer {
 	/**
 	 * @param {ObjectReadWriteStream} playerStream
 	 */
-	constructor(playerStream, debug = false) {
+	constructor(playerStream, store, debug = false) {
 		this.stream = playerStream;
+		this.store = store
 		this.log = /** @type {string[]} */ ([]);
 		this.debug = debug;
 		this.listen();
